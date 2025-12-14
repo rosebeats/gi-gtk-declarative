@@ -4,7 +4,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
 {-# LANGUAGE TupleSections #-}
-{-# LANGUAGE ViewPatterns #-}
 
 module GI.Gtk.Declarative.TestWidget where
 
@@ -20,7 +19,6 @@ import qualified Data.Vector                       as Vector
 import           Data.Void
 import qualified GI.Gtk                            as Gtk
 import           GI.Gtk.Declarative
-import           GI.Gtk.Declarative.Container.Grid  ( GridChild (..), GridChildProperties (..) )
 import           GI.Gtk.Declarative.Container.Grid as Grid
 import           GI.Gtk.Declarative.EventSource
 import           Hedgehog                    hiding ( label )

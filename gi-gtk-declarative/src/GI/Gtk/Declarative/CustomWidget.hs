@@ -107,7 +107,6 @@ instance
                   CustomModify f ->
                     f =<< Gtk.unsafeCastTo (customWidget new) widget'
                   CustomKeep    -> pure (stateTreeCustomState node)
-                  CustomReplace -> pure (stateTreeCustomState node) -- already handled above
                 return
                   (SomeState
                     (StateTreeWidget node

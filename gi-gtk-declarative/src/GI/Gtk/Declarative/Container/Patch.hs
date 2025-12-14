@@ -6,11 +6,9 @@
 {-# LANGUAGE GADTs                 #-}
 {-# LANGUAGE LambdaCase            #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE OverloadedLabels      #-}
 {-# LANGUAGE OverloadedLists       #-}
 {-# LANGUAGE ScopedTypeVariables   #-}
 {-# LANGUAGE TypeFamilies          #-}
-{-# LANGUAGE TypeOperators         #-}
 
 -- | This module implements the patch algorithm for containers.
 module GI.Gtk.Declarative.Container.Patch
@@ -19,7 +17,6 @@ module GI.Gtk.Declarative.Container.Patch
   )
 where
 
-import           Data.Foldable                  ( foldMap )
 import           Data.Vector                    ( Vector
                                                 , (!?)
                                                 )

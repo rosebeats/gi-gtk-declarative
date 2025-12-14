@@ -2,6 +2,7 @@
 {-# LANGUAGE LambdaCase       #-}
 {-# LANGUAGE RecordWildCards  #-}
 {-# LANGUAGE TypeApplications #-}
+{-# LANGUAGE MonoLocalBinds #-}
 
 -- | A simple application architecture style inspired by PureScript's Pux
 -- framework.
@@ -67,7 +68,7 @@ data Transition state event =
 -- | An exception thrown by the 'run' function when gtk's main loop exits
 -- before event/state handling which should never happen but can be caused
 -- by user code calling 'Gtk.mainQuit'
-data GtkMainExitedException =
+newtype GtkMainExitedException =
   GtkMainExitedException String deriving (Typeable, Show)
 
 instance Exception GtkMainExitedException

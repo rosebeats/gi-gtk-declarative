@@ -5,7 +5,6 @@
 
 module ListBox where
 
-import           Control.Monad                  ( void )
 import           Data.Function                  ( (&) )
 import           Data.Functor                   ( (<&>) )
 import           Data.Text                      ( Text )

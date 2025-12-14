@@ -16,7 +16,7 @@ import           GI.Gtk.Declarative
 import           GI.Gtk.Declarative.App.Simple
 import           Pipes.Prelude                  ( repeatM )
 
-data State =
+newtype State =
   State
     { count :: Integer
     }
@@ -46,7 +46,7 @@ view' State {..} =
 
 update' :: State -> Event -> Transition State Event
 update' State {..} Incr = Transition State { count = count + 1 } (pure Nothing)
-update' State {..} Closed = Exit
+update' State {} Closed = Exit
 
 main :: IO ()
 main = void $ run App { view         = view'

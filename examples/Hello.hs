@@ -8,7 +8,6 @@ import           Data.Function                  ( (&) )
 import           Data.Text                      ( Text )
 import           Pipes
 import qualified Pipes.Extras                  as Pipes
-import           Control.Monad                  ( void )
 
 import           GI.Gtk                         ( Label(..)
                                                 , Window(..)
