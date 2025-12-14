@@ -36,10 +36,10 @@ executable example
                       , bytestring
                       , gi-gobject
                       , gi-glib
-                      , gi-gtk <4
+                      , gi-gtk3 <4
                       , gi-gtk-declarative
                       , gi-gtk-declarative-app-simple
-                      , gi-gdk
+                      , gi-gdk3
                       , haskell-gi
                       , haskell-gi-base
                       , pipes

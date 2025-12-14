@@ -1,4 +1,4 @@
-{ pkgs ? import ../nixpkgs.nix, compiler ? "ghc883"
+{ pkgs ? import ../nixpkgs.nix, compiler ? "ghc96"
 , doCheck ? false, doBenchmark ? false
 }:
 

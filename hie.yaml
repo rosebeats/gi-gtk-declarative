@@ -2,7 +2,11 @@ cradle:
   cabal:
     - path: "./gi-gtk-declarative/src"
       component: "lib:gi-gtk-declarative"
+    - path: "./gi-gtk-declarative/test"
+      component: "test:gi-gtk-declarative-tests"
     - path: "./gi-gtk-declarative-app-simple/src"
       component: "lib:gi-gtk-declarative-app-simple"
+    - path: "./gi-gtk-declarative-app-simple/test"
+      component: "test:gi-gtk-declarative-app-simple-tests"
     - path: "./examples"
       component: exe:example

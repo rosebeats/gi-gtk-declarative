@@ -7,10 +7,10 @@
           checkPhase = ''
             runHook preCheck
             xvfb-run dbus-run-session \
-                --config-file=${pkgs.dbus.daemon}/share/dbus-1/session.conf \
+                --config-file=${pkgs.dbus}/share/dbus-1/session.conf \
                 ./Setup test
             runHook postCheck
             '';
       }))
-      (with pkgs; [xvfb_run dbus.daemon]);
+      (with pkgs; [xvfb-run dbus]);
 }

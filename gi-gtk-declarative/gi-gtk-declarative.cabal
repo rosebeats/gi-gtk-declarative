@@ -53,17 +53,17 @@ library
                       , GI.Gtk.Declarative.Widget
                       , GI.Gtk.Declarative.Widget.Conversions
   build-depends:        base                   >=4.10 && <5
-                      , containers             >=0.6  && <0.7
-                      , data-default-class     >=0.1  && <0.2
+                      , containers             >=0.6  && <0.8
+                      , data-default-class     >=0.1  && <0.3
                       , gi-gobject             >=2    && <3
                       , gi-glib                >=2    && <3
-                      , gi-gtk                 >=3    && <4
-                      , haskell-gi             >=0.24 && <0.27
-                      , haskell-gi-base        >=0.24 && <0.27
+                      , gi-gtk3                >=3    && <4
+                      , haskell-gi             >=0.24 && <0.28
+                      , haskell-gi-base        >=0.24 && <0.28
                       , haskell-gi-overloading >=1.0  && <1.1
                       , mtl
                       , text
-                      , unordered-containers   >=0.2  && <0.3
+                      , unordered-containers   >=0.2  && <0.4
                       , vector
 
   hs-source-dirs:       src
@@ -78,9 +78,9 @@ test-suite gi-gtk-declarative-tests
                    , async
                    , containers
                    , gi-glib
-                   , gi-gdk
+                   , gi-gdk3
                    , gi-gobject
-                   , gi-gtk <4
+                   , gi-gtk3 <4
                    , gi-gtk-declarative
                    , haskell-gi-base
                    , hedgehog >= 1 && < 2

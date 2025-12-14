@@ -1,4 +1,4 @@
-{ pkgs ? import ./nixpkgs.nix, compiler ? "ghc884", doBenchmark ? true, doCheck ? true }:
+{ pkgs ? import ./nixpkgs.nix, compiler ? "ghc96", doBenchmark ? true, doCheck ? true }:
 let
   fontsConf = pkgs.makeFontsConf {
     fontDirectories = [ pkgs.cantarell-fonts ];
@@ -16,6 +16,7 @@ in
     buildInputs = [
       project.docs
       pkgs.cabal-install
+      haskellPackages.haskell-language-server
     ];
     FONTCONFIG_FILE = fontsConf;
   }

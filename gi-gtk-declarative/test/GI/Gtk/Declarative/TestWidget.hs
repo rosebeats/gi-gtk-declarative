@@ -10,6 +10,7 @@ module GI.Gtk.Declarative.TestWidget where
 
 import           Control.Applicative
 import           Control.Monad.Except
+import           Control.Monad.IO.Class             ( MonadIO, liftIO )
 import           Data.Int                           ( Int32 )
 import           Data.Text                          ( Text )
 import           Data.Traversable                   ( for )
