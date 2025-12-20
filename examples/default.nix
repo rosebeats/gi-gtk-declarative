@@ -1,9 +1,9 @@
-{ pkgs ? import ../nixpkgs.nix, compiler ? "ghc96", doBenchmark ? false
+{ pkgs ? import ../nixpkgs.nix, doBenchmark ? false
 , gi-gtk-declarative, gi-gtk-declarative-app-simple
 }:
 
 let
-  haskellPackages = pkgs.haskell.packages.${compiler}.override {
+  haskellPackages = pkgs.haskellPackages.override {
     overrides = self: super: {
       inherit gi-gtk-declarative gi-gtk-declarative-app-simple;
     };

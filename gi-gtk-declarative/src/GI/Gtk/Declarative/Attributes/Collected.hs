@@ -18,7 +18,6 @@ module GI.Gtk.Declarative.Attributes.Collected
   )
 where
 
-import           Data.Foldable
 import qualified Data.GI.Base.Attributes       as GI
 import qualified Data.HashMap.Strict           as HashMap
 import           Data.HashMap.Strict            ( HashMap )

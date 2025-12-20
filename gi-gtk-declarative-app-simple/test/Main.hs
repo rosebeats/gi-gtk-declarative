@@ -1,5 +1,4 @@
 {-# LANGUAGE LambdaCase       #-}
-{-# LANGUAGE OverloadedLabels #-}
 {-# LANGUAGE OverloadedLists  #-}
 module Main where
 
@@ -38,7 +37,9 @@ main = hspec $
                    } `shouldThrow` errorCall "oh no"
       it "when the newly generated event is an exception" $
         -- Note: forcing the event by pattern matching is important to raise the exception
-        runApp app { update = \s ThrowError -> Transition s (pure $ Just (error "oh no"))
+        runApp app { update = \s e -> case e of
+                                       ThrowError -> Transition s (pure $ Just (error "oh no"))
+                                       _          -> update' s e
                    , inputs = [yield ThrowError]
                    } `shouldThrow` errorCall "oh no"
   where
